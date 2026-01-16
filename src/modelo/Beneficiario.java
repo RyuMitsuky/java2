@@ -20,7 +20,7 @@ public class Beneficiario extends Persona {
         );
     }
 
-    // getter y setter
+
     public int getCantidadAyudas() {
         return cantidadAyudas;
     }

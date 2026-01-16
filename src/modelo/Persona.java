@@ -16,10 +16,10 @@ public abstract class Persona {
         this.direccion = direccion;
     }
 
-    // método abstracto que deben implementar todos
+ 
     public abstract void presentarse();
 
-    // getters
+
     public String getDocumento() {
         return documento;
     }

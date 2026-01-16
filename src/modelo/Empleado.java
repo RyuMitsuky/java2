@@ -26,7 +26,7 @@ public class Empleado extends Persona {
         );
     }
 
-    // getters y setters si quieres
+ 
     public double getSalario() {
         return salario;
     }

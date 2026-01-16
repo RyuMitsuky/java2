@@ -23,7 +23,7 @@ public class Colaborador extends Persona {
         );
     }
 
-    // getters y setters si quieres
+  
     public int getHorasMes() {
         return horasMes;
     }
