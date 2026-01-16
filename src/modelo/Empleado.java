@@ -6,13 +6,27 @@ public class Empleado extends Persona {
     private String cargo;
     private String horario;
 
-    public Empleado(double salario, String cargo, String horario, String documento, String nombre, String apellido, String cedula, String direccion) {
+    public Empleado(double salario, String cargo, String horario,
+                    String documento, String nombre, String apellido,
+                    String cedula, String direccion) {
+
         super(documento, nombre, apellido, cedula, direccion);
         this.salario = salario;
         this.cargo = cargo;
         this.horario = horario;
     }
 
+    @Override
+    public void presentarse() {
+        System.out.println(
+            "Soy empleado, mi nombre es " + getNombre() + " " + getApellido() +
+            ", cargo: " + cargo +
+            ", horario: " + horario +
+            ", salario: " + salario
+        );
+    }
+
+    // getters y setters si quieres
     public double getSalario() {
         return salario;
     }
@@ -36,5 +50,4 @@ public class Empleado extends Persona {
     public void setHorario(String horario) {
         this.horario = horario;
     }
-
 }

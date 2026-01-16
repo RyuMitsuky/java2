@@ -1,24 +1,31 @@
-
 package modelo;
 
+public class Beneficiario extends Persona {
 
-public class Beneficiario extends Persona{
-    
-    private String cantidadAyudas;
+    private int cantidadAyudas;
 
-    public Beneficiario(String cantidadAyudas, String documento, String nombre, String apellido, String cedula, String direccion) {
+    public Beneficiario(int cantidadAyudas,
+                        String documento, String nombre, String apellido,
+                        String cedula, String direccion) {
+
         super(documento, nombre, apellido, cedula, direccion);
         this.cantidadAyudas = cantidadAyudas;
     }
 
-    public String getCantidadAyudas() {
+    @Override
+    public void presentarse() {
+        System.out.println(
+            "Soy beneficiario, mi nombre es " + getNombre() + " " + getApellido() +
+            ", cantidad de ayudas al mes: " + cantidadAyudas
+        );
+    }
+
+    // getter y setter
+    public int getCantidadAyudas() {
         return cantidadAyudas;
     }
 
-    public void setCantidadAyudas(String cantidadAyudas) {
+    public void setCantidadAyudas(int cantidadAyudas) {
         this.cantidadAyudas = cantidadAyudas;
     }
-    
-    
-    
 }

@@ -1,17 +1,12 @@
 package modelo;
 
-    
-public class Persona {
-    
-    public void presentarse() {
-        System.out.println("Hola mi nombre es " + getNombre() + getApellido());
+public abstract class Persona {
 
-}  
-    String documento;
-    String nombre;
-    String apellido;
-    String cedula;
-    String direccion;
+    private String documento;
+    private String nombre;
+    private String apellido;
+    private String cedula;
+    private String direccion;
 
     public Persona(String documento, String nombre, String apellido, String cedula, String direccion) {
         this.documento = documento;
@@ -21,46 +16,27 @@ public class Persona {
         this.direccion = direccion;
     }
 
+    // método abstracto que deben implementar todos
+    public abstract void presentarse();
+
+    // getters
     public String getDocumento() {
         return documento;
-    }
-
-    public void setDocumento(String documento) {
-        this.documento = documento;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getApellido() {
         return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
     }
 
     public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
     public String getDireccion() {
         return direccion;
     }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
 }
-
-

@@ -1,23 +1,34 @@
-
 package modelo;
 
-
 public class Colaborador extends Persona {
-    
-    private String horasMes;
+
+    private int horasMes;
     private String meta;
 
-    public Colaborador(String horasMes, String meta, String documento, String nombre, String apellido, String cedula, String direccion) {
+    public Colaborador(int horasMes, String meta,
+                       String documento, String nombre, String apellido,
+                       String cedula, String direccion) {
+
         super(documento, nombre, apellido, cedula, direccion);
         this.horasMes = horasMes;
         this.meta = meta;
     }
 
-    public String getHorasMes() {
+    @Override
+    public void presentarse() {
+        System.out.println(
+            "Soy colaborador, mi nombre es " + getNombre() + " " + getApellido() +
+            ", horas al mes: " + horasMes +
+            ", meta: " + meta
+        );
+    }
+
+    // getters y setters si quieres
+    public int getHorasMes() {
         return horasMes;
     }
 
-    public void setHorasMes(String horasMes) {
+    public void setHorasMes(int horasMes) {
         this.horasMes = horasMes;
     }
 
@@ -28,7 +39,4 @@ public class Colaborador extends Persona {
     public void setMeta(String meta) {
         this.meta = meta;
     }
-    
-    
-    
 }
